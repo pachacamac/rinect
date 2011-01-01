@@ -6,7 +6,6 @@ def require_local(path)
 end
 
 # Include standard libraries
-require 'rubygems'
 require 'usb'
 
 # Include Rinect files
