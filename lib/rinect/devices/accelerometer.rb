@@ -29,16 +29,16 @@ module Rinect
   
     #FIXME: I can't manage to get any data back :/ 
     def get   
-      data = "\0" * 32
-      ret = @handle.usb_control_msg 0x40, 0x32, 0x0000, 0x0000, data, 5000
-		  #raise "read wrong number of bytes" if ret != 32
-      @state = {:val1 => (data[2][0] << 8 ) | data[3][0],
-                :val2 => (data[4][0] << 8 ) | data[5][0],
-                :val3 => (data[6][0] << 8 ) | data[7][0]}
+      data = "\0" * 10
+      ret = @handle.usb_control_msg 0xC0, 0x32, 0x0000, 0x0000, data, 10
+		  raise "read wrong number of bytes" if ret != 10
+      @state = [(data[2][0] << 8 ) | data[3][0],
+                (data[4][0] << 8 ) | data[5][0],
+                (data[6][0] << 8 ) | data[7][0]]
     end
     
     def to_s
-      "Current state: #{@state.to_s}"
+      "Current state: #{@state.join(', ')}"
     end
   end
 end
