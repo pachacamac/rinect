@@ -6,9 +6,12 @@ def require_local(path)
 end
 
 # Include standard libraries
+require 'rubygems'
 require 'usb'
 
 # Include Rinect files
 require_local 'rinect/device'
 require_local 'rinect/devices/led'
 require_local 'rinect/devices/motor'
+require_local 'rinect/devices/accelerometer'
+
