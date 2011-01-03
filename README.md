@@ -7,3 +7,13 @@ Functionality is very limited right now since this project is so new, but full c
 * ruby-usb (https://github.com/akr/ruby-usb)
 
 If you're running Mac OSX, this guide may help you get ruby-usb working: http://www.jedi.be/blog/2009/11/11/ruby-usb-libusb/
+
+<h1>Current status</h1>
+What we can do:
+* Control the motor
+* Control the LED
+* Read the accelerometer
+
+What we can not do yet:
+* Read an RGB image
+* Read a depth image
