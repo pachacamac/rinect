@@ -11,11 +11,12 @@ module Rinect
       data = "\0" * 10
       ret = @handle.usb_control_msg 0xC0, 0x32, 0x0000, 0x0000, data, 10
 		  raise "read wrong number of bytes" if ret != 10
-      @state = {:x            => ((data[2][0] << 8 ) | data[3][0]).to_f / COUNTS_PER_G * GRAVITY,
-                :y            => ((data[4][0] << 8 ) | data[5][0]).to_f / COUNTS_PER_G * GRAVITY,
-                :z            => ((data[6][0] << 8 ) | data[7][0]).to_f / COUNTS_PER_G * GRAVITY,
-                :tilt_angle   => data[8][0],
-                :tilt_status  => data[9][0]}
+		  
+      @state = {:x            => ((data[2].unpack('c').first << 8 ) | data[3].unpack('c').first).to_f / COUNTS_PER_G * GRAVITY,
+                :y            => ((data[4].unpack('c').first << 8 ) | data[5].unpack('c').first).to_f / COUNTS_PER_G * GRAVITY,
+                :z            => ((data[6].unpack('c').first << 8 ) | data[7].unpack('c').first).to_f / COUNTS_PER_G * GRAVITY,
+                :tilt_angle   => data[8].unpack('c').first,
+                :tilt_status  => data[9].unpack('c').first}
     end
     
     def to_s
