@@ -13,3 +13,5 @@ require 'usb'
 require_local 'rinect/device'
 require_local 'rinect/devices/led'
 require_local 'rinect/devices/motor'
+require_local 'rinect/devices/accelerometer'
+
