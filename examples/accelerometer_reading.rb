@@ -25,4 +25,3 @@ puts accel.to_s
 sleep 3
 
 motor.set(0)
-

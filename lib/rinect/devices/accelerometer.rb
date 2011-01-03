@@ -6,6 +6,11 @@ module Rinect
     
     GRAVITY = 9.80665
     COUNTS_PER_G = 819.0
+    JOINT_STATES = {
+      0 => :stopped,
+      1 => :at_limit,
+      4 => :moving
+    }
     
     def get   
       data = "\0" * 10
@@ -16,7 +21,7 @@ module Rinect
                 :y            => ((data[4].unpack('c').first << 8 ) | data[5].unpack('c').first).to_f / COUNTS_PER_G * GRAVITY,
                 :z            => ((data[6].unpack('c').first << 8 ) | data[7].unpack('c').first).to_f / COUNTS_PER_G * GRAVITY,
                 :tilt_angle   => data[8].unpack('c').first,
-                :tilt_status  => data[9].unpack('c').first}
+                :tilt_status  => JOINT_STATES[data[9].unpack('C').first]}
     end
     
     def to_s
