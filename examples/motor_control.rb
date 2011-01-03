@@ -7,10 +7,4 @@ puts motor.to_s
 
 sleep 2
 
-motor.set(0)
-puts motor.to_s
-
-sleep 2
-
-motor.set(30)
-puts motor.to_s
+puts motor.read_accelerometer.inspect

@@ -9,6 +9,10 @@ module Rinect
       @state = :off
     end
     
+    def inspect
+      @device.inspect
+    end
+    
     def connect
       begin
         @handle ||= @device.usb_open
