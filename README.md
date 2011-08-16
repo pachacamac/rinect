@@ -19,8 +19,3 @@ What we can not do yet:
 
 * Read an RGB image
 * Read a depth image
-
-
-
-
-Just testing the awesome Github online editing feature ... yea
