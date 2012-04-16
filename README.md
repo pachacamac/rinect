@@ -1,3 +1,5 @@
+This is not actively developed by me anymore since I sold my Kinect. If anyone wants to continue this project I'd be happy to help out if I can.
+
 <h1>Rinect</h1>
 Rinect aims to be a <b>pure ruby</b> implementation (libusb requirement only) of a Microsoft Kinect driver. It will let you control and access all aspects of the Kinect via a Ruby interface.
 
