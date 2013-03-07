@@ -1,6 +1,6 @@
 module Rinect
   class Accelerometer
-    #see http://www.kionix.com/Product%20Sheets/KXSD9%20Product%20Brief.pdf
+    #see http://fivedots.coe.psu.ac.th/~ad/jg/nui16/motorControl.pdf [page 11]
     
     include Rinect::Device
     
