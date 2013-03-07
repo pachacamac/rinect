@@ -16,7 +16,7 @@ module Rinect
     end
     
     def initialize(devID)
-      @device ||= USB.devices.select {|d| d.idVendor == 0x045e && d.idProduct == DEVICES[self.class.to_s] }[devID]
+      @device ||= USB.devices.select {|d| d.idVendor == 0x045e && d.idProduct == DEVICES[self.class.to_s] }.first
       
       @handle = nil
       @state = :off

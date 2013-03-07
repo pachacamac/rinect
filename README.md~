@@ -10,7 +10,7 @@ If you're running Mac OSX, this guide may help you get ruby-usb working: http://
 
 <h1>Current status</h1>
 What we can do:
-* Support for multiple devices
+
 * Control the motor
 * Control the LED
 * Read the accelerometer
