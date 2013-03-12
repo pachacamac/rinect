@@ -1,27 +1,26 @@
 require '../lib/rinect'
 
-accel = Rinect::Accelerometer.new.connect
-motor = Rinect::Motor.new.connect
+motor = Rinect::Motor.new(0).connect
+accel = Rinect::Accelerometer.new(0).connect
 
 motor.set(0)
-sleep 3
-puts motor.to_s
+p motor.to_s
 accel.get
-puts accel.to_s
+p accel.to_s
 sleep 3
 
-motor.set(-35)
+motor.set(-10)
 sleep 3
-puts motor.to_s
+p motor.to_s
 accel.get
-puts accel.to_s
+p accel.to_s
 sleep 3
 
-motor.set(55)
+motor.set(10)
 sleep 3
-puts motor.to_s
+p motor.to_s
 accel.get
-puts accel.to_s
+p accel.to_s
 sleep 3
 
 motor.set(0)

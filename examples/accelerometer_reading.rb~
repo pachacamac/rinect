@@ -1,0 +1,30 @@
+require '../lib/rinect'
+
+accel = Rinect::Accelerometer.new({:devID=>'A00364A16016051A'}).connect
+motor = Rinect::Motor.new({:devID=>'A00364A16016051A'}).connect
+
+#motor.set(0)
+#sleep 3
+#puts motor.to_s
+motor.set(10)
+puts motor.tos_
+accel.get
+puts accel.to_s
+#puts accel.to_s
+#sleep 3
+
+#motor.set(-35)
+#sleep 3
+#puts motor.to_s
+#accel.get
+#puts accel.to_s
+#sleep 3
+
+#motor.set(55)
+#sleep 3
+#puts motor.to_s
+#accel.get
+#puts accel.to_s
+#sleep 3
+
+#motor.set(0)

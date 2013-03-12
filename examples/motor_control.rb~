@@ -1,6 +1,5 @@
 require '../lib/rinect'
 
-#prints devices serials
 Rinect::Device.get_serials()
 
 #access first kinect device available
@@ -15,7 +14,7 @@ motor = Rinect::Motor.new({:devID=>'A00364A16016051A'}).connect
 #access n-th device
 motor = Rinect::Motor.new(0).connect
 
-motor.set(0)
+motor.set(10)
 puts motor.to_s
 
 sleep 2
