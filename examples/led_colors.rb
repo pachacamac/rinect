@@ -1,6 +1,6 @@
 require '../lib/rinect'
 
-led = Rinect::LED.new.connect
+led = Rinect::LED.new(0).connect
 
 led.set(:red)
 puts led.to_s
